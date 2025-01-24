@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import ThemeSwitch from '@/components/features/ThemeSwitch';
+import ThemeSwitch from '@/components/common/ThemeSwitch';
 import { NAVIGATION } from '@/lib/constants/navigation';
 import { NavigationProps } from '@/lib/types/layout';
 
@@ -11,9 +11,9 @@ export default function Sidebar({ isOpen, toggleOpen }: NavigationProps) {
 
   return (
     <aside
-      className={`z-50 mt-[73px] min-w-full h-[calc(100vh-73px)] transition-transform p-4 fixed overflow-y-auto 
-          ${isOpen ? '-translate-x-0 sm:-translate-x-full shadow-xl' : '-translate-x-full'} 
-          duration-300 bg-background border-r`}
+      className={`z-50 mt-20 min-w-full h-sidebar transition-transform p-4 fixed overflow-y-auto 
+      ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+      duration-300 bg-background border-r`}
     >
       <div className="relative h-full p-4 rounded-xl flex flex-col justify-between overflow-y-auto">
         <ul className="space-y-2 font-medium">

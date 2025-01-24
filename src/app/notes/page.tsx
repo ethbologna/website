@@ -1,52 +1,27 @@
 'use client';
 
-import ThemeSwitch from '@/components/features/ThemeSwitch';
+import Image from 'next/image';
 
-export default function Home() {
-
+export default function Notes() {
   return (
-    <div className="w-full flex flex-col">
-      <h1 className="flex flex-col sm:flex-row justify-center items-center text-4xl font-bold">
-        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
-          Next.js
-        </a>
-        <span className="mx-2 hidden sm:block">+</span>
-        <a
-          className="mt-4 sm:mt-0"
-          href="https://tailwindcss.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tailwind CSS
-        </a>
-      </h1>
-      <h2 className="mt-2 flex flex-col sm:flex-row justify-center items-center text-3xl font-bold">
-        <a href="https://wagmi.sh/" target="_blank" rel="noopener noreferrer">
-          Wagmi
-        </a>
-        <span className="mx-2 hidden sm:block">+</span>
-        <a
-          className="mt-4 sm:mt-0"
-          href="https://tanstack.com/query/latest"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TanStack Query
-        </a>
-        <span className="mx-2 hidden sm:block">+</span>
-        <a
-          className="mt-4 sm:mt-0"
-          href="https://www.rainbowkit.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          RainbowKit
-        </a>
-      </h2>
-      <h3 className="text-2xl text-center mt-4">written in TypeScript</h3>
-      <div className="flex justify-center mt-8">
-        <ThemeSwitch />
+    <div className="w-full flex flex-col items-center justify-center space-y-8 py-12 px-4">
+      <div className="flex flex-col items-center space-y-4">
+        <Image
+          src="/img/logo.png"
+          alt="ETH Bologna Logo"
+          width={180}
+          height={180}
+          priority
+          className="w-[140px] md:w-[180px] h-[140px] md:h-[180px] mb-4"
+        />
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+          Notes
+        </h1>
       </div>
+
+      <p className="text-lg md:text-xl text-muted-foreground text-center">
+        Coming Soon
+      </p>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { IoLogoGithub } from 'react-icons/io5';
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col items-center justify-center space-y-8 py-12 px-4">
+    <div className="w-full flex flex-col items-center justify-center space-y-8">
       <div className="flex flex-col items-center space-y-4">
         <Image
           src="/img/logo.png"

@@ -2,16 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import ThemeSwitch from '@/components/features/ThemeSwitch';
+import ThemeSwitch from '@/components/common/ThemeSwitch';
 import { NAVIGATION } from '@/lib/constants/navigation';
 import { NavigationProps } from '@/lib/types/layout';
 
 export default function NavBar({ isOpen, toggleOpen }: NavigationProps) {
   return (
-    <header className="bg-background border-b w-full">
-      <nav className="flex items-center justify-between px-4 xs:px-6 md:px-8">
+    <header className="bg-background border-b w-full h-20">
+      <nav className="flex items-center justify-between px-4 xs:px-6 md:px-8 h-20">
         {/* Logo */}
-        <Link href="/" className="py-3">
+        <Link href="/">
           <Image
             src="/img/logo.png"
             alt="logo"
