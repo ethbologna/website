@@ -1,51 +1,57 @@
 'use client';
 
-import ThemeSwitch from '@/components/features/ThemeSwitch';
+import Image from 'next/image';
+import { FaTelegramPlane } from 'react-icons/fa';
+import { IoLogoGithub } from 'react-icons/io5';
 
 export default function Home() {
-
   return (
-    <div className="w-full flex flex-col">
-      <h1 className="flex flex-col sm:flex-row justify-center items-center text-4xl font-bold">
-        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
-          Next.js
-        </a>
-        <span className="mx-2 hidden sm:block">+</span>
+    <div className="w-full flex flex-col items-center justify-center space-y-8 py-12 px-4">
+      <div className="flex flex-col items-center space-y-4">
+        <Image
+          src="/img/logo.png"
+          alt="ETH Bologna Logo"
+          width={180}
+          height={180}
+          priority
+          className="w-[140px] md:w-[180px] h-[140px] md:h-[180px] mb-4"
+        />
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+          Ethereum Bologna
+        </h1>
+      </div>
+
+      <p className="text-lg md:text-xl text-muted-foreground text-center max-w-md md:max-w-2xl">
+        Building the Ethereum community in Bologna
+      </p>
+
+      <div className="flex items-center space-x-6">
         <a
-          className="mt-4 sm:mt-0"
-          href="https://tailwindcss.com/"
+          href="https://github.com/ethbologna/"
           target="_blank"
           rel="noopener noreferrer"
+          className="inline-flex items-center justify-center p-2 rounded-full 
+                     hover:bg-secondary transition-colors duration-200"
+          aria-label="GitHub"
         >
-          Tailwind CSS
+          <IoLogoGithub className="w-7 h-7" />
         </a>
-      </h1>
-      <h2 className="mt-2 flex flex-col sm:flex-row justify-center items-center text-3xl font-bold">
-        <a href="https://wagmi.sh/" target="_blank" rel="noopener noreferrer">
-          Wagmi
-        </a>
-        <span className="mx-2 hidden sm:block">+</span>
         <a
-          className="mt-4 sm:mt-0"
-          href="https://tanstack.com/query/latest"
+          href="https://t.me/ethbologna"
           target="_blank"
           rel="noopener noreferrer"
+          className="inline-flex items-center justify-center p-2 rounded-full 
+                     hover:bg-secondary transition-colors duration-200"
+          aria-label="Telegram"
         >
-          TanStack Query
+          <FaTelegramPlane className="w-7 h-7" />
         </a>
-        <span className="mx-2 hidden sm:block">+</span>
-        <a
-          className="mt-4 sm:mt-0"
-          href="https://www.rainbowkit.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          RainbowKit
-        </a>
-      </h2>
-      <h3 className="text-2xl text-center mt-4">written in TypeScript</h3>
-      <div className="flex justify-center mt-8">
-        <ThemeSwitch />
+      </div>
+
+      <div className="mt-6 text-center">
+        <p className="text-sm text-muted-foreground max-w-xs md:max-w-md mx-auto">
+          Join our community-driven discussions about blockchain technology
+        </p>
       </div>
     </div>
   );

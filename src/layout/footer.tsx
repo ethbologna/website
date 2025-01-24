@@ -6,8 +6,8 @@ import { SITE_CONFIG, SOCIAL_LINKS } from '@/lib/constants/navigation';
 export default function Footer() {
   return (
     <footer className="bg-background border-t">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between px-8 py-4">
-        <p className="mb-4 text-sm text-center text-muted-foreground sm:mb-0">
+      <div className="flex flex-row items-center justify-between px-8 py-4">
+        <p className="text-sm text-center text-muted-foreground">
           &copy; {new Date().getFullYear()}{' '}
           <Link href="/" className="hover:underline">
             {SITE_CONFIG.name}
