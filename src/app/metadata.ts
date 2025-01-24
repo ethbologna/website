@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { metadata as siteMetadata } from '@/lib/constants';
 
 export const viewport: Viewport = {
   themeColor: '#f2f2f7',
@@ -9,32 +8,55 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+const siteConfig = {
+  title: 'ETH Bologna',
+  description: 'Official website for ETH Bologna community. An open-source platform built by the community, for the community.',
+  url: 'https://www.ethbologna.com',
+  image: '/img/logo.png',
+  keywords: ['Ethereum, Bologna, Web3, Blockchain, Community, ETH Bologna, Cryptocurrency, DeFi, NFT, Smart Contracts'], 
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.ethbologna.com/'),
-  title: siteMetadata.title,
-  description: siteMetadata.description,
-  keywords: siteMetadata.keywords,
-  manifest: '/site.webmanifest',
+  metadataBase: new URL(siteConfig.url),
+  title: siteConfig.title,
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  manifest: '/manifest.json',
   icons: {
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
     icon: [
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/img/favicon.ico', sizes: 'any' },
+      { url: '/img/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: { url: '/img/apple-icon.png' },
+    other: [
+      {
+        url: '/img/web-app-manifest-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: '/img/web-app-manifest-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
     ],
   },
   openGraph: {
     type: 'website',
-    url: siteMetadata.url,
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    images: [{ url: siteMetadata.image }],
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [{ url: siteConfig.image }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    images: [siteMetadata.image],
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.image],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: siteConfig.title,
   },
 };
