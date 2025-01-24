@@ -1,4 +1,3 @@
-// src/components/pages/meetup/MeetupTabs.tsx
 import { isUpcoming } from '@/lib/utils/dateUtils';
 import EventCard from '@/components/pages/meetup/EventCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
