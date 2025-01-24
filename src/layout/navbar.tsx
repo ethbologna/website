@@ -2,26 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import ThemeSwitch from '@/components/features/ThemeSwitch';
+import { NAVIGATION } from '@/lib/constants/navigation';
 import { NavigationProps } from '@/lib/types/layout';
-
-const navLinks = [
-  {
-    label: 'GitHub',
-    href: 'https://github.com/ethbologna/website',
-  },
-  {
-    label: 'Website',
-    href: 'https://www.ethbologna.com/',
-  },
-];
 
 export default function NavBar({ isOpen, toggleOpen }: NavigationProps) {
   return (
-    <header className="px-4 xs:px-6 md:px-8 bg-neutral-100 shadow-lg dark:bg-neutral-800">
-      <nav className="flex items-center justify-between mx-auto">
+    <header className="bg-background border-b w-full">
+      <nav className="flex items-center justify-between px-4 xs:px-6 md:px-8">
         {/* Logo */}
-        <Link href="/" className="py-4 pr-4">
+        <Link href="/" className="py-3">
           <Image
             src="/img/logo.png"
             alt="logo"
@@ -33,30 +23,29 @@ export default function NavBar({ isOpen, toggleOpen }: NavigationProps) {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          {navLinks.map(({ label, href }) => (
-            <a
-              key={label}
+          {NAVIGATION.map(({ name, href }) => (
+            <Link
+              key={name}
               href={href}
-              target="_blank"
-              rel="noreferrer"
-              className="text-black text-lg font-medium dark:text-white"
+              className="text-foreground hover:text-primary text-lg font-medium transition-colors"
             >
-              {label}
-            </a>
+              {name}
+            </Link>
           ))}
-          <ConnectButton />
+          <ThemeSwitch />
         </div>
 
         {/* Mobile Navigation */}
         <div className="flex items-center md:hidden">
-          <ConnectButton />
           <button
             onClick={() => toggleOpen()}
-            className="ml-4"
+            className="text-foreground"
             aria-label="Toggle Menu"
           >
             <div
-              className={`hamburger flex flex-col justify-between w-6 h-5 ${isOpen ? 'open' : ''}`}
+              className={`hamburger flex flex-col justify-between w-6 h-5 ${
+                isOpen ? 'open' : ''
+              }`}
             >
               <span className="line" />
               <span className="line" />

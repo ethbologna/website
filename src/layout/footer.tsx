@@ -1,58 +1,33 @@
 'use client';
 
-import { FaXTwitter } from 'react-icons/fa6';
-import { IoLogoGithub, IoPlanet } from 'react-icons/io5';
-
-const socialLinks = [
-  {
-    href: 'https://github.com/ethbologna/website',
-    icon: <IoLogoGithub className="w-5 h-5" />,
-    label: 'Github',
-    hoverColor: 'hover:text-black hover:dark:text-black',
-  },
-  {
-    href: 'https://x.com/ethbologna',
-    icon: <FaXTwitter className="w-5 h-5" />,
-    label: 'Twitter',
-    hoverColor: 'hover:text-blue-600 hover:dark:text-blue-600',
-  },
-  {
-    href: 'https://www.ethbologna.com/',
-    icon: <IoPlanet className="w-5 h-5" />,
-    label: 'Website',
-    hoverColor: 'hover:text-green-500 hover:dark:text-green-500',
-  },
-];
+import Link from 'next/link';
+import { SITE_CONFIG, SOCIAL_LINKS } from '@/lib/constants/navigation';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-100 sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8 dark:bg-neutral-800">
-      <p className="mb-4 text-sm text-center text-gray-500 dark:text-gray-300 sm:mb-0">
-        &copy; {new Date().getFullYear()}{' '}
-        <a
-          className="hover:underline"
-          href="https://mashu.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ETH Bologna
-        </a>
-        . All rights reserved.
-      </p>
+    <footer className="bg-background border-t">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between px-8 py-4">
+        <p className="mb-4 text-sm text-center text-muted-foreground sm:mb-0">
+          &copy; {new Date().getFullYear()}{' '}
+          <Link href="/" className="hover:underline">
+            {SITE_CONFIG.name}
+          </Link>
+        </p>
 
-      <div className="flex justify-center items-center space-x-1">
-        {socialLinks.map(({ href, icon, label, hoverColor }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-300 ${hoverColor} hover:bg-gray-100 dark:hover:bg-gray-600`}
-          >
-            {icon}
-            <span className="sr-only">{label}</span>
-          </a>
-        ))}
+        <div className="flex justify-center items-center space-x-1">
+          {SOCIAL_LINKS.map(({ href, icon: Icon, label, hoverColor }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex justify-center p-2 text-muted-foreground rounded-lg cursor-pointer ${hoverColor} hover:bg-accent`}
+            >
+              <Icon className="w-5 h-5" />
+              <span className="sr-only">{label}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );

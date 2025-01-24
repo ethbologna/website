@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Sun, Moon } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { HiSun, HiMoon } from 'react-icons/hi';
 
 export default function ThemeSwitch({ className }: { className?: string }) {
   const { theme, resolvedTheme, setTheme } = useTheme();
@@ -19,28 +19,51 @@ export default function ThemeSwitch({ className }: { className?: string }) {
 
   if (!mounted) {
     return (
-      <button className={`w-fit rounded-full p-1.5 bg-gray-300 ` + className}>
-        <div className="rounded-full p-2 shadow-lg bg-gray-800">
-          <div className="h-6 w-6" />
-        </div>
+      <button 
+        className={`
+          relative overflow-hidden rounded-full p-2
+          bg-secondary hover:bg-secondary/80
+          transition-colors duration-200
+          ${className}
+        `}
+      >
+        <div className="h-6 w-6" />
       </button>
     );
   }
 
   return (
     <button
-      className={
-        `w-fit rounded-full p-1.5 bg-gray-300 dark:bg-gray-500 ` + className
-      }
+      className={`
+        relative overflow-hidden rounded-full p-2
+        bg-secondary hover:bg-secondary/80
+        transition-all duration-200 ease-in-out
+        ${className}
+      `}
       title="Switch Theme"
       onClick={switchTheme}
     >
-      <div className="rounded-full p-2 shadow-lg bg-gray-800 dark:bg-gray-200">
-        {resolvedTheme === 'dark' ? (
-          <HiMoon className="h-6 w-6 text-black" />
-        ) : (
-          <HiSun className="h-6 w-6 text-white" />
-        )}
+      <div className="relative">
+        <Moon 
+          className={`
+            h-6 w-6 
+            transition-all duration-500
+            ${resolvedTheme === 'dark' 
+              ? 'rotate-0 scale-100 text-primary' 
+              : 'rotate-90 scale-0 absolute'
+            }
+          `}
+        />
+        <Sun 
+          className={`
+            h-6 w-6
+            transition-all duration-500
+            ${resolvedTheme === 'dark'
+              ? '-rotate-90 scale-0 absolute'
+              : 'rotate-0 scale-100 text-primary'
+            }
+          `}
+        />
       </div>
     </button>
   );
