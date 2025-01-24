@@ -1,16 +1,3 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Next.js dApp | 404: This page could not be found.',
-  openGraph: {
-    images: ['/img/logo.png'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/img/logo.png'],
-  },
-};
-
 export default function NotFound() {
   return (
     <div className="w-full flex flex-col">

@@ -8,11 +8,11 @@ import { NavigationProps } from '@/lib/types/layout';
 const navLinks = [
   {
     label: 'GitHub',
-    href: 'https://github.com/matteocelani/next-dApp',
+    href: 'https://github.com/ethbologna/website',
   },
   {
     label: 'Website',
-    href: 'https://www.mashu.dev/',
+    href: 'https://www.ethbologna.com/',
   },
 ];
 

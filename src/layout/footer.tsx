@@ -5,25 +5,19 @@ import { IoLogoGithub, IoFlash, IoPlanet } from 'react-icons/io5';
 
 const socialLinks = [
   {
-    href: 'https://github.com/matteocelani',
+    href: 'https://github.com/ethbologna/website',
     icon: <IoLogoGithub className="w-5 h-5" />,
     label: 'Github',
     hoverColor: 'hover:text-black hover:dark:text-black',
   },
   {
-    href: 'https://twitter.com/0xMashu',
+    href: 'https://x.com/ethbologna',
     icon: <FaXTwitter className="w-5 h-5" />,
     label: 'Twitter',
     hoverColor: 'hover:text-blue-600 hover:dark:text-blue-600',
   },
   {
-    href: '#',
-    icon: <IoFlash className="w-5 h-5" />,
-    label: 'Bitcoin Wallet',
-    hoverColor: 'hover:text-primary hover:dark:text-primary',
-  },
-  {
-    href: 'https://mashu.dev',
+    href: 'https://www.ethbologna.com/',
     icon: <IoPlanet className="w-5 h-5" />,
     label: 'Website',
     hoverColor: 'hover:text-green-500 hover:dark:text-green-500',
@@ -41,7 +35,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Matteo Celani
+          ETH Bologna
         </a>
         . All rights reserved.
       </p>

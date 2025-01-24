@@ -96,5 +96,4 @@ export const wagmiConfig = getDefaultConfig({
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
   ],
   transports,
-  ssr: true, // If your dApp uses server side rendering (SSR)
 });

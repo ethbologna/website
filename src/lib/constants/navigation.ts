@@ -8,12 +8,12 @@ export const navigation = [
   },
   {
     name: 'GitHub',
-    href: 'https://github.com/matteocelani',
+    href: 'https://github.com/ethbologna/website',
     icon: IoLogoGithub,
   },
   {
     name: 'Website',
-    href: 'https://mashu.dev',
+    href: 'https://www.ethbologna.com/',
     icon: IoPlanet,
   },
 ];

@@ -10,11 +10,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://your-domain.com'), // Aggiorna con il tuo dominio
+  metadataBase: new URL('https://www.ethbologna.com/'),
   title: siteMetadata.title,
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,
-  authors: [{ name: siteMetadata.autor }],
   manifest: '/site.webmanifest',
   icons: {
     apple: [

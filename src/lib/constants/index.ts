@@ -1,14 +1,11 @@
-export const WETH = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'; // Mainnet
-
 // Metadata Head
 export const metadata = {
-  title: 'Next.js dApp',
+  title: 'ETH Bologna',
   description:
-    'Next.js dApp template with Tailwind CSS and RainbowKit built in TypeScript.',
+    'Official website for ETH Bologna community. An open-source platform built by the community, for the community.',
   keywords:
-    'React, Next.js, Tailwind CSS, Sass, RainbowKit, Solidity, Hardhat, ethers.js, Blockchain, TypeScript',
+    'Ethereum, Bologna, Web3, Blockchain, Community, ETH Bologna, Cryptocurrency, DeFi, NFT, Smart Contracts',
   type: 'website',
-  url: 'next-dapp-matteocelani.vercel.app',
-  image: 'next-dapp-matteocelani.vercel.app/img/logo.png',
-  autor: 'Matteo Celani',
+  url: 'https://www.ethbologna.com/',
+  image: '/img/logo.png',
 };
