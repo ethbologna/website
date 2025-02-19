@@ -79,9 +79,10 @@ export const events: Event[] = [
     title: 'ETH Bologna #8',
     date: '2025-02-20',
     time: '19:30',
-    location: 'To be defined',
-    description: 'Details coming soon for ETH Bologna #8!',
-    type: EventType.MEETUP,
+    location: 'Google Meet',
+    description: 'ETH Bologna #8 will be held online. Join us on Google Meet!',
+    type: EventType.ONLINE,
+    link: 'https://meet.google.com/uqq-jvmo-fzc'
   },
   {
     id: 7,

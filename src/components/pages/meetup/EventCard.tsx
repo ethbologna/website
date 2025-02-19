@@ -94,7 +94,7 @@ export default function EventCard({ event }: EventCardProps) {
             <div className="flex-shrink-0">
               <a href={event.link} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="w-full md:w-auto group">
-                  <span className="mr-2">Register Now</span>
+                  <span className="mr-1">{event.type === EventType.ONLINE ? 'Join' : 'Register Now'}</span>
                   <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Button>
               </a>
