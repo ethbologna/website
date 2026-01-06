@@ -1,7 +1,14 @@
 import { Event, EventType } from '@/lib/types/meetup';
+import eventsJson from '@/data/events.json';
 
-// Collection of all ETH Bologna events
-export const events: Event[] = [
+export const upcomingSeries: Event[] = eventsJson.map(e => ({
+  ...e,
+  type: e.type as EventType,
+  image: e.imgpath
+}));
+
+// Collection of past ETH Bologna events
+export const pastEvents: Event[] = [
   {
     id: 16,
     title: 'ETH Bologna #16',
@@ -161,3 +168,6 @@ export const events: Event[] = [
     type: EventType.MEETUP,
   },
 ];
+
+// Combine all events
+export const events: Event[] = [...upcomingSeries, ...pastEvents];

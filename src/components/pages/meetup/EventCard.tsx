@@ -12,6 +12,12 @@ import {
 } from '@/components/ui/card';
 import { Event, EventType } from '@/lib/types/meetup';
 
+const isValidDate = (dateString: string): boolean => {
+  if (!dateString || dateString === "TBD") return false;
+  const date = new Date(dateString);
+  return !isNaN(date.getTime());
+};
+
 type EventCardProps = {
   event: Event;
 };
@@ -76,11 +82,14 @@ export default function EventCard({ event }: EventCardProps) {
             <CardDescription className="flex flex-wrap items-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <CalendarDays className="h-4 w-4 text-primary" />
-                {new Date(event.date).toLocaleDateString('it-IT', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
+                {isValidDate(event.date) ? 
+                  new Date(event.date).toLocaleDateString('it-IT', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  }) : 
+                  'TBD'
+                }
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-primary" />

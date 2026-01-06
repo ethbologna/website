@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import ThemeSwitch from '@/components/common/ThemeSwitch';
 import { NAVIGATION } from '@/lib/constants/navigation';
 import { NavigationProps } from '@/lib/types/layout';
 
@@ -44,8 +43,6 @@ export default function Sidebar({ isOpen, toggleOpen }: NavigationProps) {
             </li>
           ))}
         </ul>
-
-        <ThemeSwitch className="mx-auto" />
       </div>
     </aside>
   );

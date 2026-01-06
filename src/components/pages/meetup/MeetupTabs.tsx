@@ -6,7 +6,18 @@ import { events } from '@/lib/constants/meetup';
 export default function MeetupTabs() {
   const upcomingEvents = events
     .filter((event) => isUpcoming(event.date))
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    .sort((a, b) => {
+      const timeA = new Date(a.date).getTime();
+      const timeB = new Date(b.date).getTime();
+      const aInvalid = isNaN(timeA);
+      const bInvalid = isNaN(timeB);
+
+      if (aInvalid && !bInvalid) return -1; // TBD first
+      if (!aInvalid && bInvalid) return 1;
+      if (aInvalid && bInvalid) return 0;
+
+      return timeA - timeB;
+    });
 
   const pastEvents = events
     .filter((event) => !isUpcoming(event.date))

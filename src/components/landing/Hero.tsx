@@ -21,7 +21,7 @@ export const Hero = () => {
               alt="ETH Bologna Logo"
               width={180}
               height={180}
-              className="w-[140px] md:w-[180px] h-auto invert brightness-200 md:brightness-100 md:invert-0"
+              //className="w-[140px] md:w-[180px] h-auto invert brightness-200 md:brightness-100 md:invert-0"
               priority
             />
           </div>

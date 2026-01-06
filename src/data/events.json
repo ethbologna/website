@@ -1,0 +1,97 @@
+[
+  {
+    "id": "infinite-garden",
+    "slug": "infinite-garden-web-futuro",
+    "title": "The Infinite Garden",
+    "imgpath":"/img/meetups/1.png",
+    "subtitle": "Coltivare il Web del Futuro",
+    "date": "TBD",
+    "time": "18:00 - 20:00",
+    "location": "ExDynamo a Bologna",
+    "locationLink": "https://www.instagram.com/ex.dynamo/?hl=it",
+    "description": "Introduzione alla filosofia Regen. Spiegare la differenza tra giochi finiti (dove uno vince e l'altro perde) e giochi infiniti (dove l'obiettivo è continuare a giocare). Ethereum non come \"crypto\", ma come terreno fertile per nuove idee sociali.",
+    "type": "meetup",
+    "facilitation": {
+      "title": "La Rete Vivente",
+      "description": "I partecipanti si mettono in cerchio. Uno ha un gomitolo di lana, dice il suo nome e un \"valore\" che per lui è importante (es. \"Libertà\", \"Privacy\", \"Collaborazione\"). Lancia il gomitolo a un altro tenendo il filo. Alla fine si crea una rete fisica visibile che collega tutti.",
+      "rules": "Metafora: La Blockchain è la struttura che ci connette, ma siamo noi (i nodi) a darle forma e tensione."
+    },
+    "posterPrompt": "A futuristic yet organic poster design, solarpunk style with glowing digital vines growing through circuit board patterns, featuring a mix of technology and nature in vibrant greens and blues."
+  },
+  {
+    "id": "privacy-is-power",
+    "slug": "privacy-is-power-diritti-digitali",
+    "title": "Privacy is Power",
+    "subtitle": "Diritti Digitali al Bar",
+    "imgpath":"/img/meetups/2.png",
+    "date": "TBD",
+    "time": "18:00 - 20:00",
+    "location": "ExDynamo a Bologna",
+    "locationLink": "https://www.instagram.com/ex.dynamo/?hl=it",
+    "description": "La privacy non è nascondere cose illegali, ma proteggere la propria libertà. Focus su Zero Knowledge (dimostrare qualcosa senza rivelare il dato) e sorveglianza digitale.",
+    "type": "meetup",
+    "facilitation": {
+      "title": "Due Verità e un Hash",
+      "description": "Variante del classico \"due verità e una bugia\". Ognuno scrive su un post-it 3 affermazioni su di sé (due vere, una falsa). Gli altri devono indovinare la falsa.",
+      "rules": "Metafora: Riflessione su quanto è facile (o difficile) capire chi siamo dai nostri dati e quanto controllo abbiamo sulle informazioni che rilasciamo. Chi indovina vince un adesivo/POAP."
+    },
+    "posterPrompt": "A mysterious poster with a padlock made of binary code, glowing in neon green and purple, with abstract data streams flowing around it, representing digital privacy and encryption in a cyberpunk aesthetic."
+  },
+  {
+    "id": "quadratic-beer",
+    "slug": "quadratic-beer-finanziare",
+    "title": "Quadratic Beer",
+    "subtitle": "Finanziare ciò che conta",
+    "imgpath":"/img/meetups/3.png",
+    "date": "TBD",
+    "time": "18:00 - 20:00",
+    "location": "ExDynamo a Bologna",
+    "locationLink": "https://www.instagram.com/ex.dynamo/?hl=it",
+    "description": "I Public Goods (Beni Pubblici). Come finanziamo parchi, open source o arte senza dipendere solo dallo Stato o dai miliardari? Spiegazione semplificata del Quadratic Funding (il metodo usato da Ethereum per finanziare progetti comunitari).",
+    "type": "meetup",
+    "facilitation": {
+      "title": "Il voto coi gettoni (Quadratic Voting IRL)",
+      "description": "All'ingresso si danno a tutti 10 gettoni (o bollini). Ci sono 3 ciotole che rappresentano 3 opzioni per l'aperitivo successivo (es. \"Più patatine\", \"Musica dal vivo\", \"Birra artigianale\").",
+      "rules": "Regola: 1 voto costa 1 gettone. 2 voti costano 4 gettoni. 3 voti costano 9 gettoni. Metafora: Vedere come le balene (chi ha tanti soldi) hanno meno potere e come la comunità può spingere i progetti condivisi."
+    },
+    "posterPrompt": "A mathematical poster featuring quadratic curves and voting tokens, with beer glasses arranged in geometric patterns, combining finance and social gathering in warm amber and gold tones."
+  },
+  {
+    "id": "dao-and-disorder",
+    "slug": "dao-and-disorder-organizzarsi",
+    "title": "DAO & Disorder",
+    "subtitle": "Organizzarsi senza Capi",
+    "imgpath":"/img/meetups/4.png",
+    "date": "TBD",
+    "time": "18:00 - 20:00",
+    "location": "ExDynamo a Bologna",
+    "locationLink": "https://www.instagram.com/ex.dynamo/?hl=it",
+    "description": "Le DAO (Organizzazioni Autonome Decentralizzate). Come prendere decisioni insieme senza una gerarchia piramidale. L'Ethereum come \"infrastruttura civica\".",
+    "type": "meetup",
+    "facilitation": {
+      "title": "Il Totem Muto",
+      "description": "Si formano squadre da 4-5 persone. Ogni squadra ha dei mattoncini (o bicchieri di plastica). Devono costruire la torre più alta possibile in 5 minuti.",
+      "rules": "Regola: È vietato parlare e vietato nominare un leader. Devono coordinarsi solo con lo sguardo e i gesti. Metafora: La difficoltà (e la bellezza) del coordinamento decentralizzato."
+    },
+    "posterPrompt": "An anarchic yet organized poster showing interconnected nodes forming a decentralized network, with building blocks and towers in chaotic harmony, using bold reds and blacks with circuit patterns."
+  },
+  {
+    "id": "identity-masquerade",
+    "slug": "identity-masquerade-sovrani",
+    "title": "Identity & Masquerade",
+    "subtitle": "Sovranità Digitale",
+    "imgpath":"/img/meetups/5.png",
+    "date": "TBD",
+    "time": "18:00 - 20:00",
+    "location": "ExDynamo a Bologna",
+    "locationLink": "https://www.instagram.com/ex.dynamo/?hl=it",
+    "description": "Identità Digitale e reputazione. Chi possiede il tuo profilo social? Tu o la piattaforma? Introduzione al concetto di Self-Sovereign Identity (possedere le proprie chiavi di casa digitali).",
+    "type": "meetup",
+    "facilitation": {
+      "title": "Avatar IRL",
+      "description": "All'ingresso si ricevono etichette adesive vuote. Invece del nome, ognuno deve disegnarsi un simbolo o un \"Avatar\" che lo rappresenti (senza usare parole). Durante la birra, bisogna indovinare perché l'altro ha scelto quel simbolo.",
+      "rules": "Metafora: Costruire una reputazione slegata dai dati anagrafici, basata su ciò che si esprime e si fa nella community."
+    },
+    "posterPrompt": "A masquerade ball poster with digital masks and avatars, featuring cryptographic keys as elegant accessories, in deep purples and golds with a blend of Venetian carnival and cyberpunk elements."
+  }
+]

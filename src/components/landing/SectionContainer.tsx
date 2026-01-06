@@ -3,12 +3,15 @@ import React from "react";
 
 interface SectionContainerProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
+  containerClassName?: string;
 }
 
-export const SectionContainer = ({ children, className, ...props }: SectionContainerProps) => {
+export const SectionContainer = ({ children, className, containerClassName, ...props }: SectionContainerProps) => {
   return (
-    <section className={cn("w-full py-16 md:py-24 px-4 md:px-8 max-w-7xl mx-auto", className)} {...props}>
-      {children}
+    <section className={cn("w-full", className)} {...props}>
+      <div className={cn("max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24", containerClassName)}>
+        {children}
+      </div>
     </section>
   );
 };

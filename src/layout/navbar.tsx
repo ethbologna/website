@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import ThemeSwitch from '@/components/common/ThemeSwitch';
 import { NAVIGATION } from '@/lib/constants/navigation';
 import { NavigationProps } from '@/lib/types/layout';
 
@@ -32,7 +31,6 @@ export default function NavBar({ isOpen, toggleOpen }: NavigationProps) {
               {name}
             </Link>
           ))}
-          <ThemeSwitch />
         </div>
 
         {/* Mobile Navigation */}
