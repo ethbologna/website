@@ -62,14 +62,9 @@ export const NAVIGATION: NavigationItem[] = [
     icon: IoHomeOutline,
   },
   {
-    name: 'Meetup',
+    name: 'Eventi',
     href: '/meetup',
     icon: IoCalendarOutline,
-  },
-  {
-    name: 'Notes',
-    href: '/notes',
-    icon: IoNewspaperOutline,
   },
 ];
 

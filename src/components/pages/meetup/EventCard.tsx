@@ -57,7 +57,7 @@ export default function EventCard({ event }: EventCardProps) {
                 variant={upcoming ? 'default' : 'secondary'}
                 className="uppercase text-xs tracking-wider"
               >
-                {upcoming ? 'Upcoming' : 'Past'}
+                {upcoming ? 'Prossimo' : 'Passato'}
               </Badge>
               <Badge
                 variant={getEventTypeVariant(event.type)}
@@ -76,7 +76,7 @@ export default function EventCard({ event }: EventCardProps) {
             <CardDescription className="flex flex-wrap items-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <CalendarDays className="h-4 w-4 text-primary" />
-                {new Date(event.date).toLocaleDateString('en-US', {
+                {new Date(event.date).toLocaleDateString('it-IT', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',
@@ -94,7 +94,7 @@ export default function EventCard({ event }: EventCardProps) {
             <div className="flex-shrink-0">
               <a href={event.link} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="w-full md:w-auto group">
-                  <span className="mr-1">{event.type === EventType.ONLINE ? 'Join' : 'Register Now'}</span>
+                  <span className="mr-1">{event.type === EventType.ONLINE ? 'Partecipa' : 'Registrati Ora'}</span>
                   <ArrowUpRight className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Button>
               </a>
@@ -121,7 +121,7 @@ export default function EventCard({ event }: EventCardProps) {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm font-medium">
                 <Users className="h-4 w-4 text-primary" />
-                <span>Speakers</span>
+                <span>Relatori</span>
               </div>
               <div className="flex flex-wrap gap-2 max-w-full">
                 {event.speakers.map((speaker, index) => (

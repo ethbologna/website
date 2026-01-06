@@ -12,6 +12,7 @@ export default function Footer() {
           <Link href="/" className="hover:underline">
             {SITE_CONFIG.name}
           </Link>
+          {' • '} Infinity Gardens
         </p>
 
         <div className="flex justify-center items-center space-x-0.5 md:space-x-1">

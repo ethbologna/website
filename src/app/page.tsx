@@ -17,12 +17,12 @@ export default function Home() {
           className="w-[140px] md:w-[180px] h-[140px] md:h-[180px] mb-4"
         />
         <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center">
-          Ethereum Bologna
+          ETH Bologna
         </h1>
       </div>
 
       <p className="text-lg md:text-xl text-muted-foreground text-center max-w-md md:max-w-2xl">
-        Building the Ethereum community in Bologna
+        Un movimento cyberpunk per un digitale libero. Costruiamo infinite gardens nella blockchain italiana.
       </p>
 
       <div className="flex items-center space-x-6">
@@ -30,7 +30,7 @@ export default function Home() {
           href="https://github.com/ethbologna/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center p-2 rounded-full 
+          className="inline-flex items-center justify-center p-2 rounded-full
                      hover:bg-secondary transition-colors duration-200"
           aria-label="GitHub"
         >
@@ -40,7 +40,7 @@ export default function Home() {
           href="https://t.me/ethbologna"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center p-2 rounded-full 
+          className="inline-flex items-center justify-center p-2 rounded-full
                      hover:bg-secondary transition-colors duration-200"
           aria-label="Telegram"
         >
@@ -50,7 +50,7 @@ export default function Home() {
 
       <div className="mt-6 text-center">
         <p className="text-sm text-muted-foreground max-w-xs md:max-w-md mx-auto">
-          Join our community-driven discussions about blockchain technology
+          Unisciti alla lotta per i diritti digitali, la privacy e sistemi decentralizzati. Siamo parte di SpaghettETH.
         </p>
       </div>
     </div>

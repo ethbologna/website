@@ -9,11 +9,11 @@ export const viewport: Viewport = {
 };
 
 const siteConfig = {
-  title: 'ETH Bologna',
-  description: 'Official website for ETH Bologna community. An open-source platform built by the community, for the community.',
+  title: 'ETH Bologna - Infinity Gardens',
+  description: 'Un movimento cyberpunk per un digitale libero. Costruiamo infinite gardens nella blockchain italiana. Unisciti alla lotta per i diritti digitali, la privacy e sistemi decentralizzati.',
   url: 'https://www.ethbologna.com',
   image: '/img/logo.png',
-  keywords: ['Ethereum, Bologna, Web3, Blockchain, Community, ETH Bologna, Cryptocurrency, DeFi, NFT, Smart Contracts'], 
+  keywords: ['Ethereum, Bologna, Web3, Blockchain, Community, Cyberpunk, Regen, Privacy, Diritti Digitali, SpaghettETH, Italia, DeFi, NFT, Smart Contracts'], 
 };
 
 export const metadata: Metadata = {

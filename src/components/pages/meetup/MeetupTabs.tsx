@@ -15,8 +15,8 @@ export default function MeetupTabs() {
   return (
     <Tabs defaultValue="upcoming" className="w-full">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="upcoming">Upcoming Events</TabsTrigger>
-        <TabsTrigger value="past">Past Events</TabsTrigger>
+        <TabsTrigger value="upcoming">Prossimi Eventi</TabsTrigger>
+        <TabsTrigger value="past">Eventi Passati</TabsTrigger>
       </TabsList>
 
       <div className="mt-8">
@@ -27,7 +27,7 @@ export default function MeetupTabs() {
             ))
           ) : (
             <p className="text-center text-muted-foreground">
-              No upcoming events scheduled. Stay tuned!
+              Nessun evento in programma. Resta sintonizzato sulla rivoluzione!
             </p>
           )}
         </TabsContent>
