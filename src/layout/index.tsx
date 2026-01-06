@@ -18,7 +18,7 @@ export default function Layout({ children }: PropsWithChildren) {
         isOpen={isSidebarOpen}
         toggleOpen={() => setIsSidebarOpen(!isSidebarOpen)}
       />
-      <main className="flex flex-1 px-4 w-full overflow-y-auto h-main-mobile md:h-main-desktop">{children}</main>
+      <main className="flex flex-1 w-full overflow-y-auto h-main-mobile md:h-main-desktop">{children}</main>
       <Footer />
     </div>
   );

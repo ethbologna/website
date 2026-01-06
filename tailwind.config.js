@@ -17,6 +17,10 @@ module.exports = {
 			maxWidth: {
 				'header-nav': '39rem'
 			},
+			fontFamily: {
+				sans: ['var(--font-sans)', 'sans-serif'],
+				mono: ['var(--font-mono)', 'monospace'],
+			},
 			height: {
 				sidebar: 'calc(100vh - 5rem)',
 				'main-mobile': 'calc(100vh - 7.5rem)',

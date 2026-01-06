@@ -1,8 +1,22 @@
+import { Inter, Space_Mono } from 'next/font/google';
 import { metadata } from '@/app/metadata';
 import Layout from '@/layout';
 import Providers from '@/providers/AppProviders';
 import '@/assets/styles/globals.scss';
 import '@rainbow-me/rainbowkit/styles.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const spaceMono = Space_Mono({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+});
 
 export { metadata };
 
@@ -13,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={`${inter.variable} ${spaceMono.variable} font-sans antialiased`}>
         <Providers>
           <Layout>{children}</Layout>
         </Providers>
