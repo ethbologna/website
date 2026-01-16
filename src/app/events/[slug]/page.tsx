@@ -126,16 +126,65 @@ export default async function EventPage({ params }: PageProps) {
              </div>
 
              <div className="space-y-6">
-                <div className="bg-primary/5 border border-primary/20 p-6 rounded-lg text-center space-y-4">
-                    <h3 className="font-mono text-primary">Partecipa all{`'`}evento</h3>
-                    <p className="text-sm text-muted-foreground">
-                        L{`'`}ingresso è libero. Unisciti al gruppo Telegram per aggiornamenti last-minute.
+                <div className="bg-primary/5 border border-primary/20 p-6 rounded-lg space-y-6">
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-mono font-bold uppercase tracking-tight text-primary">
+                      Come Partecipare
+                    </h3>
+                    <p className="text-muted-foreground font-mono text-xs">
+                      Posti limitati (max 30 per evento).
                     </p>
-                    <Button className="w-full font-mono bg-primary text-black hover:bg-primary/90" asChild>
-                         <a href="https://t.me/ethbologna" target="_blank" rel="noopener noreferrer">
-                            Entra su Telegram
-                         </a>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="space-y-1">
+                      <div className="text-primary font-mono font-bold text-sm">
+                        01. REGISTER
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Iscriviti al modulo a questo{" "}
+                        <a
+                          href="https://forms.gle/EN5Tpv7sd2nyr6Ft6"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline"
+                        >
+                          LINK
+                        </a>
+                      </p>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="text-primary font-mono font-bold text-sm">
+                        02. PING
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Entra nel gruppo Telegram.
+                      </p>
+                    </div>
+                    <div className="space-y-1">
+                      <div className="text-primary font-mono font-bold text-sm">
+                        03. COLLECT
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        Ricevi il tuo POAP a fine evento.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <Button
+                      className="w-full font-mono bg-primary !text-black hover:bg-primary/90 text-sm"
+                      asChild
+                    >
+                      <a
+                        href="https://t.me/ethbologna"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Entra su Telegram
+                      </a>
                     </Button>
+                  </div>
                 </div>
              </div>
           </div>

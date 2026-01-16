@@ -10,8 +10,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen w-full">
       <Hero />
       <Manifesto />
-      <Network />
       <Events />
+      <Network />
     </div>
   );
 }

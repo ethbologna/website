@@ -63,65 +63,6 @@ export const Events = () => {
                 </div>
             ))}
         </div>
-
-        <div className="w-full max-w-4xl mt-16 p-8 border border-primary/20 bg-primary/5 rounded-2xl space-y-8">
-          <div className="text-center space-y-2">
-            <h3 className="text-2xl font-mono font-bold uppercase tracking-tight">
-              Come Partecipare
-            </h3>
-            <p className="text-muted-foreground font-mono text-sm">
-              I posti sono strettamente limitati (max 30 per evento).
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="space-y-3">
-              <div className="text-primary font-mono font-bold text-xl">
-                01. REGISTER
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Iscriviti all'evento tramite il modulo a questo  <a
-                href="https://forms.gle/EN5Tpv7sd2nyr6Ft6"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LINK
-              </a>
-              </p>
-            </div>
-            <div className="space-y-3">
-              <div className="text-primary font-mono font-bold text-xl">
-                02. PING
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Entra nel gruppo Telegram.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <div className="text-primary font-mono font-bold text-xl">
-                03. COLLECT
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Partecipa e ricevi alla fine dell'evento il tuo POAP.
-              </p>
-            </div>
-          </div>
-
-          <div className="pt-4 text-center">
-            <Button
-              className="font-mono bg-primary text-black hover:bg-primary/90"
-              asChild
-            >
-              <a
-                href="https://t.me/ethbologna"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Vai su Telegram
-              </a>
-            </Button>
-          </div>
-        </div>
       </div>
     </SectionContainer>
   );
