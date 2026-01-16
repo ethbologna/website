@@ -4,41 +4,50 @@
 
 @layer base {
   :root {
-    /* "Infinite Garden" Theme - Custom Palette */
+    /* "Infinite Garden" Theme - Full Pastel Palette */
 
     /* Light Blue-Grey Background */
     --background: 220 25% 95%;
-    --foreground: 248 53% 15%;
+    --foreground: 186 100% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 248 53% 15%;
+    --card-foreground: 186 100% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 248 53% 15%;
+    --popover-foreground: 186 100% 12%;
 
-    /* Slate Blue Primary (#6A5ACD) */
-    --primary: 248 53% 58%;
+    /* Teal Primary (#2B8F9C) */
+    --primary: 186 57% 39%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light Pink Secondary (#FFB6C1) */
-    --secondary: 351 100% 86%;
-    --secondary-foreground: 248 53% 15%;
+    /* Orange Secondary (#FFC978) */
+    --secondary: 36 100% 74%;
+    --secondary-foreground: 186 100% 12%;
 
-    /* Light Lavender Muted (#D0B0FF) */
-    --muted: 264 100% 85%;
-    --muted-foreground: 248 20% 40%;
+    /* Sky Blue Muted (#88C8FF) */
+    --muted: 208 100% 77%;
+    --muted-foreground: 186 30% 30%;
 
-    /* Turquoise Accent (#5FCFDD) */
-    --accent: 182 63% 62%;
-    --accent-foreground: 248 53% 15%;
+    /* Pink Accent (#FFB6C1) */
+    --accent: 351 100% 86%;
+    --accent-foreground: 186 100% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Light Blue Border (#88C8FF) */
-    --border: 208 100% 77%;
-    --input: 208 100% 77%;
-    --ring: 248 53% 58%;
+    /* Cyan Border (#5FCFDD) */
+    --border: 182 63% 62%;
+    --input: 182 63% 62%;
+
+    /* Periwinkle Ring (#9B8FFF) */
+    --ring: 247 100% 81%;
+
+    /* Chart Colors (incorporating Lavender and Slate Blue) */
+    --chart-1: 186 57% 39%; /* Teal */
+    --chart-2: 36 100% 74%;  /* Orange */
+    --chart-3: 351 100% 86%; /* Pink */
+    --chart-4: 248 53% 58%; /* Slate Blue */
+    --chart-5: 264 100% 85%; /* Lavender */
 
     /* Radius */
     --radius: 0.5rem;
@@ -74,7 +83,7 @@
   }
 
   html {
-    @apply text-base;
+    @apply text-lg;
   }
 
   body {

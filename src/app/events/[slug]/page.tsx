@@ -37,11 +37,11 @@ export default async function EventPage({ params }: PageProps) {
                 &larr; Torna alla Home
             </Link>
 
-            <Badge variant="outline" className="border-secondary text-secondary font-mono tracking-widest uppercase mb-4">
+            <Badge variant="outline" className="border-secondary text-secondary font-mono font-bold tracking-widest uppercase mb-4">
                {event.type}
             </Badge>
 
-            <h1 className="text-4xl md:text-6xl font-bold font-mono uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-white">
+            <h1 className="text-4xl md:text-6xl font-bold font-mono uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground">
               {event.title}
             </h1>
             {event.subtitle && (
@@ -62,7 +62,7 @@ export default async function EventPage({ params }: PageProps) {
                <div className="flex items-center gap-2">
                  <MapPinIcon className="w-5 h-5 text-primary" />
                  {event.locationLink ? (
-                    <a href={event.locationLink} target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-dashed">
+                    <a href={event.locationLink} target="_blank" rel="noopener noreferrer" className="hover:text-primary underline decoration-dashed transition-colors">
                         {event.location}
                     </a>
                  ) : (
@@ -72,15 +72,15 @@ export default async function EventPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
+          <div className="grid md:grid-cols-3 gap-8 border-t border-border pt-12">
              <div className="md:col-span-2 space-y-8">
-                <div className="prose prose-invert max-w-none">
-                    <h3 className="text-2xl font-mono text-white mb-4">Il Tema</h3>
+                <div className="prose dark:prose-invert max-w-none">
+                    <h3 className="text-2xl font-mono text-foreground mb-4">Il Tema</h3>
                     <p className="text-lg leading-relaxed text-muted-foreground">{event.description}</p>
                 </div>
 
                 {event.image ? (
-                   <div className="relative w-full rounded-lg overflow-hidden border border-white/10 shadow-[0_0_20px_rgba(34,197,94,0.1)] group">
+                   <div className="relative w-full rounded-lg overflow-hidden border border-border shadow-[0_0_20px_rgba(34,197,94,0.1)] group">
                       <Image
                          src={event.image}
                          alt={`Locandina: ${event.title}`}
@@ -91,8 +91,8 @@ export default async function EventPage({ params }: PageProps) {
                       />
                    </div>
                 ) : event.posterPrompt && (
-                    <div className="p-4 rounded-lg border border-dashed border-white/10 text-xs font-mono text-muted-foreground">
-                        <span className="block text-white mb-2 uppercase tracking-wider">Visione Estetica</span>
+                    <div className="p-4 rounded-lg border border-dashed border-border text-xs font-mono text-muted-foreground">
+                        <span className="block text-foreground mb-2 uppercase tracking-wider font-bold">Visione Estetica</span>
                         {event.posterPrompt}
                     </div>
                 )}

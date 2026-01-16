@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 import animate from "tailwindcss-animate"
 module.exports = {
-	darkMode: ['class', 'class'],
-	content: ['./src/**/*.{,ts,tsx}'],
+	darkMode: 'class',
+	content: ['./src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
 			backgroundImage: {

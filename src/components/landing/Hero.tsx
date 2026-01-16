@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/10">
+    <div className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden border-b border-border">
       {/* Background Grid - CSS Only */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
 
@@ -15,20 +15,19 @@ export const Hero = () => {
       <div className="z-10 flex flex-col items-center space-y-8 text-center max-w-4xl px-4">
         <div className="relative group">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-secondary opacity-75 blur-lg group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-          <div className="relative bg-black rounded-full p-4 border border-white/10">
+          <div className="relative bg-background dark:bg-black rounded-full p-4 border border-border">
             <Image
               src="/img/logo.png"
               alt="ETH Bologna Logo"
               width={180}
               height={180}
-              //className="w-[140px] md:w-[180px] h-auto invert brightness-200 md:brightness-100 md:invert-0"
               priority
             />
           </div>
         </div>
 
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-white animate-pulse" data-text="ETH Bologna">
+          <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground animate-pulse" data-text="ETH Bologna">
             ETH Bologna
           </h1>
           <p className="text-xl md:text-2xl font-mono text-primary/80 glitch-effect" data-text="Movimento Cyberpunk / Digitale Libero">
@@ -53,7 +52,7 @@ export const Hero = () => {
 
           <Button
             variant="outline"
-            className="h-12 px-8 text-lg font-mono border-primary/50 text-white hover:bg-primary/10 hover:border-primary transition-all"
+            className="h-12 px-8 text-lg font-mono border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary transition-all"
             asChild
           >
              <a href="#manifesto">

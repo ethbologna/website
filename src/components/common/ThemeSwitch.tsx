@@ -22,7 +22,6 @@ export default function ThemeSwitch({ className }: { className?: string }) {
       <button 
         className={`
           relative overflow-hidden rounded-full p-2
-          bg-secondary hover:bg-secondary/80
           transition-colors duration-200
           ${className}
         `}
@@ -36,7 +35,6 @@ export default function ThemeSwitch({ className }: { className?: string }) {
     <button
       className={`
         relative overflow-hidden rounded-full p-2
-        bg-secondary hover:bg-secondary/80
         transition-all duration-200 ease-in-out
         ${className}
       `}

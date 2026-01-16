@@ -20,7 +20,7 @@ export const Events = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
             {upcomingSeries.map((event) => (
-                <div key={event.id} className="bg-card border border-white/5 rounded-xl overflow-hidden hover:border-primary/50 transition-all group flex flex-col">
+                <div key={event.id} className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all group flex flex-col">
                     <div className="p-6 flex-1 space-y-4">
                         <div className="flex justify-between items-start">
                              <Badge variant="secondary" className="font-mono text-xs">
@@ -36,7 +36,7 @@ export const Events = () => {
                                 {event.title}
                              </h3>
                              {event.subtitle && (
-                                <p className="text-sm text-secondary font-mono">{event.subtitle}</p>
+                                <p className="text-sm text-secondary font-mono font-bold">{event.subtitle}</p>
                              )}
                         </div>
 
@@ -51,7 +51,7 @@ export const Events = () => {
                     </div>
 
                     <div className="p-6 pt-0 mt-auto">
-                        <Button variant="outline" className="w-full border-white/10 hover:border-primary hover:bg-primary/5 group/btn" asChild>
+                        <Button variant="outline" className="w-full border-border hover:border-primary hover:bg-primary/5 group/btn" asChild>
                             <Link href={`/events/${event.slug}`}>
                                 Dettagli Evento <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                             </Link>
