@@ -46,7 +46,7 @@ export const Hero = () => {
             Lottiamo per la privacy e i diritti digitali.
           </p>
         </div>
-
+{/*
         <div className="flex flex-col sm:flex-row gap-4 pt-8">
           <Button
             className="h-12 px-8 text-lg font-mono bg-primary !text-black hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(34,197,94,0.5)] transition-all border border-transparent"
@@ -68,6 +68,8 @@ export const Hero = () => {
             </a>
           </Button>
         </div>
+*/}
+
       </div>
 
       {/* Scroll Indicator */}
