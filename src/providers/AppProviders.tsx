@@ -11,7 +11,7 @@ export default function Providers({ children }: ProvidersProps) {
   return (
     <ThemeProvider
       attribute="class"
-      defaultTheme="system"
+      defaultTheme="dark"
       enableSystem
       disableTransitionOnChange
     >
@@ -19,4 +19,3 @@ export default function Providers({ children }: ProvidersProps) {
     </ThemeProvider>
   );
 }
-

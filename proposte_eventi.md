@@ -1,4 +1,4 @@
-proposta per un filone di 5 eventi "Birra & Blockchain" (da tenersi preferibilmente il venerdì o il giovedì), pensati per essere informali, coinvolgenti e incentrati sui valori Regen, Cypherpunk e dei Beni Pubblici.
+proposta per un filone di 5 eventi "Birra & Blockchain" (da tenersi preferibilmente il venerdì o il giovedì), pensati per essere informali, coinvolgenti e incentrati sui valori Regen, Cyberpunk e dei Beni Pubblici.
 
 L'obiettivo è spostare la narrazione dalla speculazione finanziaria alla costruzione di società digitali più eque.
 

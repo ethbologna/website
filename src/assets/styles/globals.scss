@@ -4,44 +4,47 @@
 
 @layer base {
   :root {
-    /* Cyberpunk Theme - "Void & Neon" */
+    /* "Infinite Garden" Theme - Custom Palette */
 
-    /* Deep Void Black Background */
-    --background: 240 10% 3.9%; /* Near black with blue tint */
-    --foreground: 0 0% 98%;
+    /* Light Blue-Grey Background */
+    --background: 220 25% 95%;
+    --foreground: 248 53% 15%;
 
-    --card: 240 10% 5%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 248 53% 15%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 248 53% 15%;
 
-    /* Neon Green Primary */
-    --primary: 142 70% 50%;
-    --primary-foreground: 240 5.9% 10%;
+    /* Slate Blue Primary (#6A5ACD) */
+    --primary: 248 53% 58%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Cyberpunk Purple Secondary */
-    --secondary: 270 100% 60%;
-    --secondary-foreground: 0 0% 98%;
+    /* Light Pink Secondary (#FFB6C1) */
+    --secondary: 351 100% 86%;
+    --secondary-foreground: 248 53% 15%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    /* Light Lavender Muted (#D0B0FF) */
+    --muted: 264 100% 85%;
+    --muted-foreground: 248 20% 40%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    /* Turquoise Accent (#5FCFDD) */
+    --accent: 182 63% 62%;
+    --accent-foreground: 248 53% 15%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 142 70% 50%;
+    /* Light Blue Border (#88C8FF) */
+    --border: 208 100% 77%;
+    --input: 208 100% 77%;
+    --ring: 248 53% 58%;
 
     /* Radius */
     --radius: 0.5rem;
   }
 
-  /* Force dark mode variables even without .dark class if possible, but keeping .dark for compatibility */
+  /* Cyberpunk Theme - "Void & Neon" */
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -79,7 +82,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-mono uppercase tracking-tighter;
+    @apply font-mono font-bold uppercase tracking-tighter;
   }
 }
 

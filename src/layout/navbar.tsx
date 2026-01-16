@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { NAVIGATION } from '@/lib/constants/navigation';
 import { NavigationProps } from '@/lib/types/layout';
+import ThemeSwitch from '@/components/common/ThemeSwitch';
 
 export default function NavBar({ isOpen, toggleOpen }: NavigationProps) {
   return (
@@ -20,36 +21,41 @@ export default function NavBar({ isOpen, toggleOpen }: NavigationProps) {
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          {NAVIGATION.map(({ name, href }) => (
-            <Link
-              key={name}
-              href={href}
-              className="text-foreground hover:text-primary text-lg font-medium transition-colors"
-            >
-              {name}
-            </Link>
-          ))}
-        </div>
+        {/* Actions & Navigation */}
+        <div className="flex items-center space-x-6">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-6">
+            {NAVIGATION.map(({ name, href }) => (
+              <Link
+                key={name}
+                href={href}
+                className="text-foreground hover:text-primary text-lg font-medium transition-colors"
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
 
-        {/* Mobile Navigation */}
-        <div className="flex items-center md:hidden">
-          <button
-            onClick={() => toggleOpen()}
-            className="text-foreground"
-            aria-label="Toggle Menu"
-          >
-            <div
-              className={`hamburger flex flex-col justify-between w-6 h-5 ${
-                isOpen ? 'open' : ''
-              }`}
+          <ThemeSwitch />
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => toggleOpen()}
+              className="text-foreground"
+              aria-label="Toggle Menu"
             >
-              <span className="line" />
-              <span className="line" />
-              <span className="line" />
-            </div>
-          </button>
+              <div
+                className={`hamburger flex flex-col justify-between w-6 h-5 ${
+                  isOpen ? 'open' : ''
+                }`}
+              >
+                <span className="line" />
+                <span className="line" />
+                <span className="line" />
+              </div>
+            </button>
+          </div>
         </div>
       </nav>
     </header>
