@@ -1,4 +1,5 @@
 import { upcomingSeries } from "@/lib/constants/meetup";
+import { parseDate } from "@/lib/utils/dateUtils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPinIcon, ArrowRight } from "lucide-react";
@@ -27,7 +28,13 @@ export const Events = () => {
                     <div className="p-6 flex-1 space-y-4">
                         <div className="flex justify-between items-start">
                              <Badge variant="secondary" className="font-mono text-xs">
-                                {event.date === "TBD" ? "DA CONFERMARE" : event.date}
+                                {event.date === "TBD" ? "DA CONFERMARE" : 
+                                    parseDate(event.date)?.toLocaleDateString('it-IT', {
+                                        day: '2-digit',
+                                        month: '2-digit',
+                                        year: 'numeric'
+                                    }).replace(/\//g, '.') || event.date
+                                }
                              </Badge>
                              <div className="flex items-center text-xs text-muted-foreground font-mono gap-1">
                                 <ClockIcon className="w-3 h-3" /> {event.time}

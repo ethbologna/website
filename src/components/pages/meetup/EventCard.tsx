@@ -1,5 +1,5 @@
 import { CalendarDays, MapPin, Clock, ArrowUpRight, Users } from 'lucide-react';
-import { isUpcoming } from '@/lib/utils/dateUtils';
+import { isUpcoming, parseDate } from '@/lib/utils/dateUtils';
 import { Badge } from '@/components/ui/badge';
 import { BadgeProps } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,9 +13,7 @@ import {
 import { Event, EventType } from '@/lib/types/meetup';
 
 const isValidDate = (dateString: string): boolean => {
-  if (!dateString || dateString === "TBD") return false;
-  const date = new Date(dateString);
-  return !isNaN(date.getTime());
+  return !!parseDate(dateString);
 };
 
 type EventCardProps = {
@@ -82,8 +80,8 @@ export default function EventCard({ event }: EventCardProps) {
             <CardDescription className="flex flex-wrap items-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <CalendarDays className="h-4 w-4 text-primary" />
-                {isValidDate(event.date) ? 
-                  new Date(event.date).toLocaleDateString('it-IT', {
+                {parseDate(event.date) ? 
+                  parseDate(event.date)!.toLocaleDateString('it-IT', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',

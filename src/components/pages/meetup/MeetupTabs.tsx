@@ -1,4 +1,4 @@
-import { isUpcoming } from '@/lib/utils/dateUtils';
+import { isUpcoming, parseDate } from '@/lib/utils/dateUtils';
 import EventCard from '@/components/pages/meetup/EventCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { events } from '@/lib/constants/meetup';
@@ -7,8 +7,10 @@ export default function MeetupTabs() {
   const upcomingEvents = events
     .filter((event) => isUpcoming(event.date))
     .sort((a, b) => {
-      const timeA = new Date(a.date).getTime();
-      const timeB = new Date(b.date).getTime();
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      const timeA = dateA ? dateA.getTime() : NaN;
+      const timeB = dateB ? dateB.getTime() : NaN;
       const aInvalid = isNaN(timeA);
       const bInvalid = isNaN(timeB);
 
@@ -21,7 +23,13 @@ export default function MeetupTabs() {
 
   const pastEvents = events
     .filter((event) => !isUpcoming(event.date))
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    .sort((a, b) => {
+      const dateA = parseDate(a.date);
+      const dateB = parseDate(b.date);
+      const timeA = dateA ? dateA.getTime() : 0;
+      const timeB = dateB ? dateB.getTime() : 0;
+      return timeB - timeA;
+    });
 
   return (
     <Tabs defaultValue="upcoming" className="w-full">

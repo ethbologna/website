@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { events } from "@/lib/constants/meetup";
+import { parseDate } from "@/lib/utils/dateUtils";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "@/components/landing/SectionContainer";
 import { Badge } from "@/components/ui/badge";
@@ -53,7 +54,13 @@ export default async function EventPage({ params }: PageProps) {
             <div className="flex flex-col md:flex-row gap-6 text-lg text-muted-foreground font-mono pt-4 justify-center md:justify-start">
                <div className="flex items-center gap-2">
                  <CalendarIcon className="w-5 h-5 text-primary" />
-                 <span>{event.date}</span>
+                 <span>
+                    {parseDate(event.date)?.toLocaleDateString('it-IT', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric'
+                    }).replace(/\//g, '.') || event.date}
+                 </span>
                </div>
                <div className="flex items-center gap-2">
                  <ClockIcon className="w-5 h-5 text-primary" />
