@@ -76,7 +76,34 @@ export default async function EventPage({ params }: PageProps) {
              <div className="md:col-span-2 space-y-8">
                 <div className="prose dark:prose-invert max-w-none">
                     <h3 className="text-2xl font-mono text-foreground mb-4">Il Tema</h3>
-                    <p className="text-lg leading-relaxed text-muted-foreground">{event.description}</p>
+                    <div className="text-lg leading-relaxed text-muted-foreground whitespace-pre-wrap">
+                      {event.description}
+                    </div>
+                </div>
+
+                {event.facilitation && (
+                  <div className="prose dark:prose-invert max-w-none pt-8 border-t border-border/50">
+                    <h3 className="text-2xl font-mono text-foreground mb-4">
+                      {event.facilitation.title || "Workshop & Networking"}
+                    </h3>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      {event.facilitation.description}
+                    </p>
+                    {event.facilitation.rules && (
+                       <div className="mt-4 p-4 bg-secondary/5 border-l-4 border-secondary/30 text-sm italic">
+                          {event.facilitation.rules}
+                       </div>
+                    )}
+                  </div>
+                )}
+
+                <div className="prose dark:prose-invert max-w-none pt-8 border-t border-border/50">
+                    <h3 className="text-xl font-mono text-foreground mb-4">Format dell{`'`}incontro</h3>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                      <li><span className="text-foreground font-bold">Intro tematica:</span> Il concetto filosofico/sociale della serata.</li>
+                      <li><span className="text-foreground font-bold">Testimonianza:</span> Un esperto o un "builder" che racconta un caso d'uso reale.</li>
+                      <li><span className="text-foreground font-bold">Workshop/Networking:</span> Un momento pratico o di dibattito aperto per toccare con mano la tecnologia.</li>
+                    </ul>
                 </div>
 
                 {event.image ? (

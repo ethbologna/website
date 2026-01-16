@@ -10,12 +10,15 @@ export const Events = () => {
     <SectionContainer containerClassName="py-24">
       <div className="flex flex-col items-center space-y-12">
         <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-mono font-bold uppercase tracking-tighter">
-            Prossimi <span className="text-primary glitch-effect" data-text="Eventi">Eventi</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-                La serie &quot;Birra & Blockchain&quot;: informali, coinvolgenti e incentrati sui valori Regen.
-            </p>
+          <h2 className="text-3xl md:text-5xl font-mono font-bold uppercase tracking-tighter">
+            Prossimi <span className="text-primary glitch-effect" data-text="Eventi">
+              Eventi
+            </span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            La rassegna "EthBologna Cultural Series": 5 appuntamenti,
+            sempre di giovedì, dalle 18:00 alle 20:00 presso ExDynamo.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
@@ -61,12 +64,63 @@ export const Events = () => {
             ))}
         </div>
 
-        <div className="pt-8 text-center">
-            <Button variant="link" className="text-muted-foreground hover:text-primary font-mono" asChild>
-                <a href="https://t.me/ethbologna" target="_blank" rel="noopener noreferrer">
-                   Rimani aggiornato su Telegram -&gt;
-                </a>
+        <div className="w-full max-w-4xl mt-16 p-8 border border-primary/20 bg-primary/5 rounded-2xl space-y-8">
+          <div className="text-center space-y-2">
+            <h3 className="text-2xl font-mono font-bold uppercase tracking-tight">
+              Come Partecipare
+            </h3>
+            <p className="text-muted-foreground font-mono text-sm">
+              I posti sono strettamente limitati (max 30 per evento).
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="space-y-3">
+              <div className="text-primary font-mono font-bold text-xl">
+                01. REGISTER
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Iscriviti all'evento tramite il modulo a questo  <a
+                href="https://forms.gle/EN5Tpv7sd2nyr6Ft6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LINK
+              </a>
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="text-primary font-mono font-bold text-xl">
+                02. PING
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Entra nel gruppo Telegram.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <div className="text-primary font-mono font-bold text-xl">
+                03. COLLECT
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Partecipa e ricevi alla fine dell'evento il tuo POAP.
+              </p>
+            </div>
+          </div>
+
+          <div className="pt-4 text-center">
+            <Button
+              className="font-mono bg-primary text-black hover:bg-primary/90"
+              asChild
+            >
+              <a
+                href="https://t.me/ethbologna"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Vai su Telegram
+              </a>
             </Button>
+          </div>
         </div>
       </div>
     </SectionContainer>

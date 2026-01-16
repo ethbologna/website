@@ -15,7 +15,7 @@ export const Hero = () => {
       <div className="z-10 flex flex-col items-center space-y-8 text-center max-w-4xl px-4">
         <div className="relative group">
           <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary to-secondary opacity-75 blur-lg group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-          <div className="relative bg-background dark:bg-black rounded-full p-4 border border-border">
+          <div className=" relative bg-background dark:bg-black rounded-full p-1 border border-border">
             <Image
               src="/img/logo.png"
               alt="ETH Bologna Logo"

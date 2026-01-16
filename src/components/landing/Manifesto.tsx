@@ -20,16 +20,19 @@ export const Manifesto = () => {
 
           <div className="space-y-4 text-muted-foreground text-lg leading-relaxed font-light">
             <p>
-              Siamo un gruppo di persone animate da ideali quasi <span className="text-foreground font-medium">"cyberpunk"</span>,
-              che tenta di costruire un internet più aperto e accessibile a tutti.
+              Dimentica il "To The Moon" e la speculazione finanziaria.
+              EthBologna nasce per esplorare il lato{" "}
+              <span className="text-primary font-mono">Regen</span>{" "}
+              (Rigenerativo) della tecnologia.
             </p>
             <p>
-              Nel mondo blockchain, questo movimento è conosciuto come <span className="text-primary font-mono">Regen</span>.
-              Ci poniamo l'obiettivo di creare sistemi decentralizzati e non gerarchici — "infinite gardens" —
-              in netta contrapposizione a un sistema finanziario e digitale chiuso e controllato da pochi.
+              Crediamo che Ethereum non sia un casinò, ma un terreno fertile per
+              nuove architetture sociali. Siamo costruttori, filosofi, artisti e
+              sviluppatori.
             </p>
             <p className="border-l-2 border-primary pl-4 italic text-foreground/80">
-              "Crediamo che la lotta per i diritti digitali, la privacy e la creazione di sistemi aperti siano battaglie profondamente sociali e attuali."
+              "Il nostro stile è Brutale. La nostra visione è
+              Solarpunk."
             </p>
           </div>
         </div>
